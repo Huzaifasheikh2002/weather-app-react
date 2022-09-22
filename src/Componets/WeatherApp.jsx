@@ -1,6 +1,8 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 
+
+
 const WeatherApp = () => {
 
     const apiKey =["e7d5e50aa5818b0de38b67d1599dc980"]
@@ -42,8 +44,8 @@ const handleInput=(e)=>{
 
     SetinputValue(e.target.value)
 }
-  return (<>
-    <div className='col-md-12'>
+  return (
+    <div className='Main'>
         <div className='Bg'>
 
             <h1 className='heading'>Weather App</h1>
@@ -52,14 +54,17 @@ const handleInput=(e)=>{
         
             <input  onChange={handleInput}  
             value={inputValue}
-             type="text" className='form-control'/>
+            placeholder="Enter Country,City Name..."
+             type="text" className='form-control '/>
              
             <button onClick={handleSearch} className='btn btn-primary mt-4 SearchBtn'>Search</button>
             </form>
             
         </div>
 <section className='col-md-12 text-align center mt-10'>
-<div className='shadow rounded weatherResultBox'>
+<div className='weatherResultBox'>
+<img className="weathorIcon"
+              src="https://i.pinimg.com/originals/77/0b/80/770b805d5c99c7931366c2e84e88f251.png" />
 <h5 className='WeatherCity'>{data?.name}</h5>
 <h6 className='WeatherTemp'>{((data?.main?.temp)-273.15).toFixed(2)}°C</h6>
 </div>
@@ -68,7 +73,7 @@ const handleInput=(e)=>{
 </section>
 
     </div>
-    </>)
+)
 }
 
 export default WeatherApp
