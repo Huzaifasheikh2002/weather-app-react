@@ -11,25 +11,29 @@ const WeatherApp = () => {
 
 
     const getWeatherDetails=(CityName)=>{
-        // if(!CityName) return    
+        if(!CityName) return    
 const apiURL=`https://api.openweathermap.org/data/2.5/weather?q=${CityName}&appid=${apiKey}`
 axios.get(apiURL)
 .then((response)=>{
-console.log("huziiii res",response);
+// console.log("huziiii res",response);
 setData(response.data)
 }).catch((error)=>{
-    console.log("error",error);
+
+
+    // console.log("error",error);
+  
 })
 }
 useEffect(()=>{
 getWeatherDetails("karachi")
+
 },[])
 
 
 const handleForm=(e)=>{
     e.preventDefault();
-    if (!inputValue) {
-        console.log("enter some value");
+    if (!inputValue ) {
+        // console.log("enter some value");
         return;
       }
 }
@@ -37,6 +41,7 @@ const handleForm=(e)=>{
 const handleSearch =()=>{
     
 getWeatherDetails(inputValue)
+SetinputValue("")
 }
 
 

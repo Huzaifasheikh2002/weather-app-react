@@ -16,8 +16,11 @@ background-size: cover;
   text-align: center;
   align-items: center;
 height: 100vh;
+/* margin-top: 20px; */
 }
-
+.Bg{
+  margin-bottom: 50px;
+}
 
 .heading{
   color: aliceblue;
