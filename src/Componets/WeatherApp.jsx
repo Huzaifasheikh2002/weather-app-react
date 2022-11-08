@@ -12,7 +12,7 @@ const WeatherApp = () => {
                 // console.log("huziiii res",response);
                 setData(response.data)
             }).catch((error) => {
- // console.log("error",error);
+ console.log("error",error);
             }) }
     useEffect(() => {
         getWeatherDetails("karachi")
@@ -50,4 +50,5 @@ const WeatherApp = () => {
                     <h6 className='WeatherTemp'>{((data?.main?.temp) - 273.15).toFixed(2)}°C</h6>
                 </div>
             </section> 
-            </div> )} ;export default WeatherApp
+            </div> )} ;
+            export default WeatherApp
