@@ -33,22 +33,22 @@ const WeatherApp = () => {
         <div className='Main'>
             <div className='Bg'>
                 <nav className="navbar navbar" >
-                    <div className="container-fluid col-10">
+                    <div className="container-fluid col-11">
                         <h1 className='heading'>Weather App</h1>
                         <form onSubmit={handleForm} className="d-flex">
                             <input onChange={handleInput} className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                            <button onClick={handleSearch} className="btn btn-primary  " type="submit">Search</button>
+                            <button onClick={handleSearch} className="btn btn-primary" type="submit">Search</button>
                         </form>
                     </div>
                 </nav>
             </div>
-            <section className=''>
+            {/* <section className=''> */}
                 <div className='weatherResultBox'>
-                    <img className="weathorIcon"
+                    <img className="weatherIcon"
                         src="https://i.pinimg.com/originals/77/0b/80/770b805d5c99c7931366c2e84e88f251.png" />
                     <h5 className='WeatherCity'>{data?.name}</h5>
                     <h6 className='WeatherTemp'>{((data?.main?.temp) - 273.15).toFixed(2)}°C</h6>
                 </div>
-            </section> 
+            {/* </section>  */}
             </div> )} ;
             export default WeatherApp
